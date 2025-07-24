@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ListEasy | Legal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 
+      Chosen Palette: Seafoam & Sky 
+      Application Structure Plan: The application is designed as a top-to-bottom narrative landing page to guide the user from problem to solution. It starts with a strong Hero section to grab attention, followed by a "platforms covered" section to immediately build trust and show scope. It then visualizes the problem (inconsistent listings), explains the simple 4-step process, introduces an upsell opportunity with the "Level Up" panel, and concludes with a clear pricing and sign-up call-to-action. This linear flow is optimal for a sales page. 
+      
+      Visualization & Content Choices:
+      - Hero/Sub-hero: Goal: Inform/Hook. Method: Large, prominent text over an image. Justification: Immediately conveys the core value proposition with visual appeal.
+      - Logo Row: Goal: Inform/Build Trust. Method: Styled HTML placeholders in a two-column grid. Justification: Shows the breadth of the service in a structured, easy-to-scan format.
+      - Problem Visualization: Goal: Compare. Method: HTML/Tailwind diagram showing a "messy" vs. "clean" listing. Interaction: None. Justification: Visually demonstrates the pain point without relying on images, making it more impactful than text alone.
+      - How It Works: Goal: Organize/Explain. Method: Numbered, vertical timeline/process flow using HTML/Tailwind. Interaction: None. Justification: Breaks down the service into simple, digestible steps.
+      - Level Up Panel: Goal: Upsell/Inform. Method: A dedicated section with distinct styling. Justification: Clearly separates the core offering from the premium add-on, preventing confusion.
+      - Sign-up Form: Goal: Convert. Method: Standard HTML form. Interaction: Form submission. Justification: Provides a clear, final step for the user to take action.
+      
+      CONFIRMATION: NO SVG graphics used. NO Mermaid JS used.
+    -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8FAFC; 
+        }
+        .hero-bg-image {
+            background-image: url('https://drive.google.com/uc?export=view&id=1St-ZR0fSrcReF__oBX_f4Lh_Nm1Jb-o0');
+            background-size: cover;
+            background-position: center;
+        }
+        .signup-bg-image {
+            background-image: url('https://drive.google.com/uc?export=view&id=1St-ZR0fSrcReF__oBX_f4Lh_Nm1Jb-o0');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .section-bg {
+            background-color: #FFFFFF;
+        }
+        .accent-bg {
+            background-color: #EFF6FF; /* Light Blue */
+        }
+        .brand-text {
+            color: #1E293B; /* Darker Slate */
+        }
+        .accent-text {
+            color: #64748B; /* Lighter Slate */
+        }
+        .brand-button {
+            background-color: #0D9488; /* Teal */
+            color: #FFFFFF;
+            transition: background-color 0.3s ease;
+        }
+        .brand-button:hover {
+            background-color: #0F766E; /* Darker Teal */
+        }
+        .step-circle {
+            background-color: #0D9488; /* Teal */
+            color: #FFFFFF;
+        }
+        .logo-placeholder {
+            font-weight: 600;
+            color: #334155;
+            background-color: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            padding: 0.75rem 1.25rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            box-shadow: 0 1px 3px 0 rgba(0,0,0,0.07), 0 1px 2px 0 rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .logo-placeholder:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+        }
+        .level-up-bg {
+            background-color: #F0FDF4; /* Light Green */
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="brand-text">
+
+    <!-- Header Section -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-sm shadow-sm">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <h1 class="text-2xl font-bold brand-text">ListEasy <span class="accent-text font-medium">| Legal Tech</span></h1>
+            <nav>
+                <button id="nav-cta" class="brand-button font-bold py-2 px-4 rounded-lg text-sm">Sign Up Now</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative hero-bg-image">
+            <div class="absolute inset-0 hero-overlay"></div>
+            <div class="relative container mx-auto px-6 py-24 md:py-40 text-center text-white">
+                <h2 class="text-4xl md:text-6xl font-extrabold leading-tight">Control Your Product Story, Everywhere.</h2>
+                <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-gray-200">We make sure your messaging is complete, compelling and consistent across your prospect's journey.</p>
+                <button id="hero-cta" class="mt-10 brand-button font-bold py-4 px-8 rounded-lg text-lg">Get Started</button>
+            </div>
+        </section>
+
+        <!-- Logo Row Section -->
+        <section class="accent-bg py-16">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-3xl font-bold brand-text">You must be present to win.</h3>
+                <p class="mt-2 text-lg accent-text">We set up and manage your product presence everywhere legal tech buyers go.</p>
+                <div class="mt-10 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="logo-placeholder">Artificial Lawyer Legal Tech Directory</div>
+                    <div class="logo-placeholder">Capterra Legal</div>
+                    <div class="logo-placeholder">CLOC Product Directory</div>
+                    <div class="logo-placeholder">Crunchbase Legal Tech Hubs</div>
+                    <div class="logo-placeholder">G2</div>
+                    <div class="logo-placeholder">Global Legal Tech Directory</div>
+                    <div class="logo-placeholder">Google Workspace Marketplace</div>
+                    <div class="logo-placeholder">ILTA Product Directory</div>
+                    <div class="logo-placeholder">LawNext Directory</div>
+                    <div class="logo-placeholder">Legal Tech Hub</div>
+                    <div class="logo-placeholder">LinkedIn Product Page</div>
+                    <div class="logo-placeholder">Microsoft AppSource</div>
+                    <div class="logo-placeholder">Stanford CodeX Tech Index</div>
+                    <div class="logo-placeholder">Theorem Marketplace</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Visualization Section -->
+        <section class="section-bg py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                     <h3 class="text-4xl font-bold brand-text">From Inconsistent to Influential</h3>
+                     <p class="mt-3 text-xl accent-text max-w-2xl mx-auto">A consistent, compelling narrative builds trust and authority.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 items-stretch">
+                    <!-- Before -->
+                    <div class="p-6 rounded-lg bg-red-50 flex flex-col">
+                        <h4 class="text-xl font-semibold text-red-800 mb-4">Before: A Chaotic Journey</h4>
+                        <div class="space-y-4 flex-grow">
+                            <div class="p-4 rounded-md bg-white shadow-sm">
+                                <p class="font-semibold">Listing on Legal Tech Hub</p>
+                                <p class="text-sm text-gray-600">Outdated feature list, old logo.</p>
+                            </div>
+                            <div class="p-4 rounded-md bg-white shadow-sm">
+                                <p class="font-semibold">Profile on LawSites</p>
+                                <p class="text-sm text-gray-600">Description copied from a 2-year-old press release.</p>
+                            </div>
+                            <div class="p-4 rounded-md bg-white shadow-sm">
+                                <p class="font-semibold">LinkedIn Product Page</p>
+                                <p class="text-sm text-gray-600">No recent updates, broken link to pricing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- After -->
+                    <div class="p-6 rounded-lg bg-green-50 flex flex-col justify-center">
+                        <h4 class="text-xl font-semibold text-green-800 mb-6">After: A Controlled Narrative</h4>
+                         <div class="space-y-5">
+                            <div class="p-4 rounded-md bg-white shadow-sm">
+                                <p class="text-lg font-semibold text-gray-700">✓ Everywhere that matters</p>
+                            </div>
+                            <div class="p-4 rounded-md bg-white shadow-sm">
+                                <p class="text-lg font-semibold text-gray-700">✓ Compelling and consistent</p>
+                            </div>
+                            <div class="p-4 rounded-md bg-white shadow-sm">
+                                <p class="text-lg font-semibold text-gray-700">✓ Always current</p>
+                            </div>
+                             <div class="p-4 rounded-md bg-white shadow-sm">
+                                <p class="text-lg font-semibold text-gray-700">✓ Effortlessly managed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="accent-bg py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold brand-text">Turn-key presence management</h3>
+                    <p class="mt-2 text-lg accent-text">Go from scattered to streamlined in 4 simple steps.</p>
+                </div>
+                <div class="max-w-2xl mx-auto">
+                    <div class="relative">
+                        <!-- Step 1 -->
+                        <div class="flex items-start mb-12">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 rounded-full step-circle flex items-center justify-center font-bold text-xl">1</div>
+                            </div>
+                            <div class="ml-6">
+                                <h4 class="text-xl font-bold brand-text">Onboard</h4>
+                                <p class="mt-1 accent-text">In a 30 minute onboarding session we inventory listing opportunities and collateral requirements.</p>
+                            </div>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="flex items-start mb-12">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 rounded-full step-circle flex items-center justify-center font-bold text-xl">2</div>
+                            </div>
+                            <div class="ml-6">
+                                <h4 class="text-xl font-bold brand-text">Prepare</h4>
+                                <p class="mt-1 accent-text">Our team gets to work, creating consistent and compelling copy to go with your collateral.</p>
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="flex items-start mb-12">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 rounded-full step-circle flex items-center justify-center font-bold text-xl">3</div>
+                            </div>
+                            <div class="ml-6">
+                                <h4 class="text-xl font-bold brand-text">Publish</h4>
+                                <p class="mt-1 accent-text">With your approval, we publish your optimized product information in all the right places.</p>
+                            </div>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 rounded-full step-circle flex items-center justify-center font-bold text-xl">4</div>
+                            </div>
+                            <div class="ml-6">
+                                <h4 class="text-xl font-bold brand-text">Monitor and Maintain</h4>
+                                <p class="mt-1 accent-text">We continuously monitor your site for copy changes to ensure alignment and effectiveness.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Level Up Section -->
+        <section class="section-bg py-16 md:py-24">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-3xl font-bold brand-text">Level up with an expert touch</h3>
+                <p class="mt-4 text-lg max-w-3xl mx-auto accent-text">For vendors seeking a world-class presence, our experts can design and execute your messaging plan with custom-created collateral, including video, imagery, and case studies.</p>
+            </div>
+        </section>
+
+        <!-- Sign Up Section -->
+        <section id="signup-section" class="relative signup-bg-image py-16 md:py-24">
+            <div class="absolute inset-0 bg-gray-800/70"></div>
+            <div class="relative container mx-auto px-6">
+                <div class="max-w-xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-2xl">
+                    <h3 class="text-3xl font-bold brand-text text-center">Sign Up & Take Control</h3>
+                    <p class="text-center mt-2 accent-text"><span class="font-bold text-2xl brand-text">$79/month</span> billed annually</p>
+                    <form id="signup-form" class="mt-8 space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Your Name</label>
+                            <input type="text" id="name" name="name" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm">
+                        </div>
+                        <div>
+                            <label for="company" class="block text-sm font-medium text-gray-700">Company Name</label>
+                            <input type="text" id="company" name="company" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Work Email</label>
+                            <input type="email" id="email" name="email" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm">
+                        </div>
+                        <div>
+                            <label for="website" class="block text-sm font-medium text-gray-700">Product Website URL</label>
+                            <input type="url" id="website" name="website" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm">
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-lg font-medium brand-button">
+                                Sign Up & Upgrade Your Listings
+                            </button>
+                        </div>
+                    </form>
+                    <div id="form-message" class="mt-4 text-center"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="section-bg py-8">
+        <div class="container mx-auto px-6 text-center accent-text text-sm">
+            <p>&copy; 2025 ListEasy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for form submission and smooth scrolling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Navigation scroll logic ---
+            const signupSection = document.getElementById('signup-section');
+            const navCta = document.getElementById('nav-cta');
+            const heroCta = document.getElementById('hero-cta');
+            
+            const scrollToSignup = () => {
+                signupSection.scrollIntoView({ behavior: 'smooth' });
+            };
+
+            if (navCta) navCta.addEventListener('click', scrollToSignup);
+            if (heroCta) heroCta.addEventListener('click', scrollToSignup);
+            
+            // --- Form submission logic ---
+            const form = document.getElementById('signup-form');
+            const formMessage = document.getElementById('form-message');
+            // PASTE YOUR WEB APP URL HERE:
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxewtGdjkd0X5QXURY1a4lBvs80SyS0RlKWU_yzmIsLynAtlmACI8m1dpmcymKc5Ycp/exec';
+
+            if(form) {
+              form.addEventListener('submit', function(e) {
+                  e.preventDefault(); // Prevent the default form submit action.
+                  
+                  const submitButton = form.querySelector('button');
+                  submitButton.disabled = true;
+                  submitButton.textContent = 'Submitting...';
+
+                  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                      .then(response => {
+                          formMessage.textContent = 'Thank you for your interest! We will be in touch shortly.';
+                          formMessage.className = 'mt-4 text-center text-green-600';
+                          submitButton.disabled = false;
+                          submitButton.textContent = 'Sign Up & Upgrade Your Listings';
+                          form.reset();
+                      })
+                      .catch(error => {
+                          formMessage.textContent = 'Error! Could not submit form. Please try again.';
+                          formMessage.className = 'mt-4 text-center text-red-600';
+                          submitButton.disabled = false;
+                          submitButton.textContent = 'Sign Up & Upgrade Your Listings';
+                          console.error('Error!', error.message);
+                      });
+              });
+            }
+        });
+    </script>
+
+</body>
+</html>
